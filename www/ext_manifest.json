@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "$uperF@st",
+    "description": "进入视频页时，自动加速连播",
+    "version": "2.3.3",
+    "permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": [
+                "inject.js"
+            ],
+            "matches": [
+                "*://mooc1-1.chaoxing.com/mycourse/studentstudy*",
+                "*://mooc1-1.chaoxing.com/knowledge/cards*"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
